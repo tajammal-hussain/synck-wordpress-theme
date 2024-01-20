@@ -35,4 +35,4 @@ if(current_user_can( 'manage_options')){
  */
 
 
- 
+require get_template_directory(). '/inc/functions/function-global.php';

@@ -125,7 +125,7 @@ for (let i = 0; i < cards.length; i++) {
 
 // Slide-left Animation //
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     const animationElements = $('.animation-slide-left');
   
     function checkInView() {
@@ -149,7 +149,7 @@ $(document).ready(function() {
 
 // Slide-Right Animation //
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     const animationElements = $('.animation-slide-right');
   
     function checkInView() {
