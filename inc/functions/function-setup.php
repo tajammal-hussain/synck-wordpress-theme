@@ -51,11 +51,24 @@ add_action( 'after_setup_theme', 'synck_setup');
  *
  * @param array $mimes Allowed file types.
  */
-function flatsome_upload_mimes( $mimes ) {
+function allow_upload_mimes( $mimes ) {
 	if ( ! isset( $mimes['json'] ) ) {
 		$mimes['json'] = 'text/plain';
 	}
 	return $mimes;
 }
-add_filter( 'upload_mimes', 'flatsome_upload_mimes' );
+add_filter( 'upload_mimes', 'allow_upload_mimes' );
 
+
+/**
+ * Add SVG to allowed file types.
+ *
+ * @param array $mimes Allowed file types.
+ */
+function allow_svg_upload( $mimes ) {
+	if ( ! isset( $mimes['svg'] ) ) {
+		$mimes['svg'] = 'image/svg+xml';
+	}
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'allow_svg_upload' );

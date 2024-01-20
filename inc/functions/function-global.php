@@ -13,19 +13,19 @@ if(!function_exists("synck_enqueue_styles"))
     function synck_enqueue_styles(){
 
         // ========== Start THeme Stylesheet ========== 
-        wp_enqueue_style('synck-icons', get_template_directory_uri().'/assets/css/iconoir.css"', '', '1.0.0', true);
+        wp_enqueue_style('synck-icons', get_template_directory_uri().'/assets/css/iconoir.css"', '', '1.0.0', "all");
         
         //Bootstrap
-        wp_enqueue_style('synck-bootstrap', get_template_directory_uri().'/assets/css/bootstrap.min.css"', '', '5.3.2', true);
+        wp_enqueue_style('synck-bootstrap', get_template_directory_uri().'/assets/css/bootstrap.min.css"', '', '5.3.2', "all");
 
         //Swiper
-        wp_enqueue_style('synck-Swiper', get_template_directory_uri().'/assets/css/swiper-bundle.min.css"', '', '10.2.0', true);
+        wp_enqueue_style('synck-Swiper', get_template_directory_uri().'/assets/css/swiper-bundle.min.css"', '', '10.2.0', "all");
         
         //Global CSS
-        wp_enqueue_style('synck-Global-Style', get_template_directory_uri().'/assets/css/style.css"', '', '10.2.0', true);
+        wp_enqueue_style('synck-Global-Style', get_template_directory_uri().'/assets/css/style.css"', '', '10.2.0', "all");
 
         //Responsiveness
-        wp_enqueue_style('synck-Global-Style', get_template_directory_uri().'/assets/css/responsive.css"', '', '10.2.0', true);
+        wp_enqueue_style('synck-Responsiveness-Style', get_template_directory_uri().'/assets/css/responsive.css"', '', '10.2.0', "all");
         // ========== End Theme Stylesheet ==========
 
     }
@@ -48,3 +48,4 @@ if(!function_exists("synck_enqueue_scripts")){
     }
     add_action( "wp_enqueue_scripts", "synck_enqueue_scripts");
 }
+

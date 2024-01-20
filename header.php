@@ -25,5 +25,15 @@
 </head>
 <body <?php body_class(); ?>>
 <?php do_action( 'synck_after_body_open' ); ?>
+
+<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'flatsome' ); ?></a>
     <!-- Main -->
     <main class="main-page homepage">
+        <!-- Header -->
+        <header class="header-area">
+            <div class="custom-container">
+                <div class="custom-row align-items-center justify-content-between">
+                    <?php get_template_part( 'template-parts/header/header', 'wrapper' ); ?>
+                </div>
+            </div>
+        </header>
