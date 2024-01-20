@@ -49,3 +49,14 @@ if(!function_exists("synck_enqueue_scripts")){
     add_action( "wp_enqueue_scripts", "synck_enqueue_scripts");
 }
 
+
+
+
+/**
+ * Minify CSS
+  */
+function minify_css($css){
+  //$css = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $css);
+  $css = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $css);
+  return $css;
+}

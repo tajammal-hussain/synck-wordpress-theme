@@ -35,3 +35,4 @@ if(current_user_can( 'manage_options')){
  */
 require get_template_directory(). '/inc/functions/function-global.php';
 require get_template_directory(). '/inc/functions/function-setup.php';
+require get_template_directory() . '/inc/functions/function-custom-css.php';

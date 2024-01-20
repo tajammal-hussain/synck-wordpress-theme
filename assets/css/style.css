@@ -474,6 +474,8 @@ img {
 .header-area .logo img {
     display: block;
     max-width: 166px;
+    width:100%;
+    height:auto;
 }
 .header-area .navbar-wrapper .close-menu-bar {
     display: none;
