@@ -1,0 +1,12 @@
+.options-title-divider {
+    background-color: #000000;
+    border-top: 2px solid #092c50;
+    color: #fff;
+    font-size: 120%;
+    font-weight: bolder;
+    margin-bottom: -12px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 8px 25px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+}

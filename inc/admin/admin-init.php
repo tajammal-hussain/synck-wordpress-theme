@@ -7,6 +7,10 @@
  */
 
 
+//Global CSS
+
+require get_template_directory(). '/inc/admin/customizer/customizer-config.php';
+
 
  // Add Options
 if(is_customize_preview()){
@@ -16,7 +20,7 @@ if(is_customize_preview()){
     // include_once(dirname( __FILE__ ).'/options/styles/options-lightbox.php');
 
     //Header
-    include_once(dirname( __FILE__ ).'/options/header/options-header-logo.php');
+    include_once(dirname( __FILE__ ).'/options/header/options-header.php');
 
 }
 
