@@ -15,6 +15,7 @@ require get_template_directory(). '/inc/admin/customizer/customizer-config.php';
 
 //ACF
 require get_template_directory(). '/inc/admin/acf/acf.php';
+require get_template_directory(). '/inc/admin/acf/config.php';
 
 
  // Add Options
