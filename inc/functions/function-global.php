@@ -20,12 +20,13 @@ if(!function_exists("synck_enqueue_styles"))
 
         //Swiper
         wp_enqueue_style('synck-Swiper', get_template_directory_uri().'/assets/css/swiper-bundle.min.css"', '', '10.2.0', "all");
-        
+      
         //Global CSS
         wp_enqueue_style('synck-Global-Style', get_template_directory_uri().'/assets/css/style.css"', '', '10.2.0', "all");
 
         //Responsiveness
         wp_enqueue_style('synck-Responsiveness-Style', get_template_directory_uri().'/assets/css/responsive.css"', '', '10.2.0', "all");
+
         // ========== End Theme Stylesheet ==========
 
     }

@@ -111,21 +111,25 @@ function mnk_init_frontpage_fields() {
     
     $learn_more = new \Monk\ACF\Field\Basic('LearnMore');
     $learn_more->instructions = 'Learn More Button Please Add Learn more Text';
-    
-    $letTalk = new \Monk\ACF\Field\Basic('LetsTalk');
-    $letTalk->instructions = 'Lets Talk Button Please Add Learn more Text';
+    $learn_more_url = new \Monk\ACF\Field\Basic('LearnMorekUrl','url');
 
-    $image = new \Monk\ACF\Field\Image('image');
+    $letTalk = new \Monk\ACF\Field\Basic('LetsTalk');
+
+    $letTalk->instructions = 'Lets Talk Button Please Add Learn more Text';
+    $let_Talk_url = new \Monk\ACF\Field\Basic('LetsTalkUrl', 'url');
+
+
+    $image = new \Monk\ACF\Field\Image('banner');
     $image->instructions = 'Image to the right';
 
     $experience = new \Monk\ACF\Field\Group('Experience');
-    $image = new \Monk\ACF\Field\Image('experienceImage');
-    $image->instructions = 'Image to the left of the Experience';
+    $experienceImage = new \Monk\ACF\Field\Image('experienceImage');
+    $experienceImage->instructions = 'Image to the left of the Experience';
     $number = new \Monk\ACF\Field\Number('experienceNumber');
     $exp_content = new Monk\ACF\Field\Wysiwyg('experienceContent');
 
     $experience->addSubField(
-        $image,
+        $experienceImage,
         $number,
         $exp_content
     );
@@ -150,6 +154,8 @@ function mnk_init_frontpage_fields() {
         $banner_text,
         $learn_more,
         $letTalk,
+        $learn_more_url,
+        $let_Talk_url,
         $image,
         $experience,
         $experts
