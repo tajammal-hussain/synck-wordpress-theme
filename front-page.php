@@ -46,7 +46,7 @@
             </div>
             <div class="bottom-content d-flex">
                 <?php if(isset($banner['experts'])) : ?>
-               <a href="./team.html" class="our-expert-team-box simple-shadow bounce-in delay-2">
+               <a href="<?php echo isset($banner['experts']['experturl']) ?  $banner['experts']['experturl']: ''; ?>" class="our-expert-team-box simple-shadow bounce-in delay-2">
                   <div class="our-expert-team-box-inner d-flex align-items-center">
                     <?php if(isset($banner['experts']['image'])): ?>
                      <div class="imgs imgs1 d-flex align-items-center">

@@ -87,7 +87,6 @@ add_action('acf/init', function() {
 });
 
 
-
 /**
  * Init frontpage fields
  * 
@@ -139,14 +138,18 @@ function mnk_init_frontpage_fields() {
 
     $repeat_image = new \Monk\ACF\Field\Repeater('image');
     $ExpertImage = new \Monk\ACF\Field\Image('expertImage');
+
     $repeat_image->addSubField(
         $ExpertImage
     );
 
     $expertContent = new Monk\ACF\Field\Wysiwyg('expertcontent');
+    $Expert_url = new \Monk\ACF\Field\Basic('experturl', 'url');
+
     $experts->addSubField(
         $repeat_image,
         $expertContent,
+        $Expert_url,
     );
 
 
