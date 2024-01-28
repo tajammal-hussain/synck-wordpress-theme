@@ -15,13 +15,10 @@ return
                 'preview_size' => 'full-width',
             ),
             array(
-                'key' => 'field_5e9a525f3c76e',
                 'label' => 'Content',
                 'type' => 'wysiwyg',
                 'instructions' => 'Enter the content for this content block.',
-                'wrapper' => array(
-                    'width' => '50',
-                ),
+               
             ),
         ),
     );
