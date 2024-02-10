@@ -7,6 +7,7 @@
      */
     get_header();
     do_action( 'synck_before_page' );
+    
 ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <?php do_action( 'synck_before_page_content' ); ?>

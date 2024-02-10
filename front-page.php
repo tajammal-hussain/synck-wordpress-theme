@@ -5,7 +5,7 @@
      * @package          Synck\Templates
      * @Synck-version 1.0.0
      */
-
-    get_header();
+    global $post_id;
+    get_header(); 
 ?>
 <?php get_footer(); ?>

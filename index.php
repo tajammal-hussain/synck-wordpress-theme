@@ -5,5 +5,7 @@
      * @package          Synck\Templates
      * @Synck-version 1.0.0
      */
-    get_header();?>
+    get_header();
+   
+?>
 <?php get_footer(); ?>
