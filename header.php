@@ -5,7 +5,6 @@
  * @package          Synck\Templates
  * @Synck-version 1.0.0
  */
-
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="">

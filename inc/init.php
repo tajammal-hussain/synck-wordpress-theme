@@ -1,5 +1,4 @@
 <?php
-
 /**
 * Synck Template Inc.
 * This section houses the core functions for the Synck theme.
@@ -24,8 +23,6 @@ require get_template_directory() . '/inc/admin/options/styles/options-type.php';
  * Theme Admin
  */
     require get_template_directory() . '/inc/admin/admin-init.php';
-
-
 /**
  * Setup.
  * Enqueue styles, register widget regions, etc.
@@ -33,3 +30,4 @@ require get_template_directory() . '/inc/admin/options/styles/options-type.php';
 require get_template_directory(). '/inc/functions/function-global.php';
 require get_template_directory(). '/inc/functions/function-setup.php';
 require get_template_directory() . '/inc/functions/function-custom-css.php';
+require get_template_directory() . '/inc/functions/builder-save.php';

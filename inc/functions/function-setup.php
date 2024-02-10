@@ -1,14 +1,11 @@
 <?php
-
 if ( ! isset( $content_width ) ) {
 	$content_width = 1020; // Pixels.
 }
 
-
 /**
  * Setup Synck.
  */
-
 function synck_setup(){
     
     /* add title tag support */

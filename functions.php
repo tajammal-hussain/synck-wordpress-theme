@@ -4,11 +4,9 @@
  *
  * @package Synck
  */
-
 require get_template_directory() . '/inc/init.php';
 
 define('MNK_REPLACE_LABELS_META_KEY', '_mnk_replace_labels');
-
 
 add_action('acf/init', function() {
     $colors = [
@@ -167,6 +165,4 @@ function mnk_init_frontpage_fields() {
     $frontpage->addField($banner);
     
     return $frontpage;
-    
 }
-

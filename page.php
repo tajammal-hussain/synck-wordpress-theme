@@ -22,5 +22,4 @@
 <?php
     do_action( 'synck_after_page' );
     get_footer();
-
 ?>

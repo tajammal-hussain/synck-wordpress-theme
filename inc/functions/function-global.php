@@ -1,6 +1,4 @@
 <?php
-
-
 /*
  * Enqueue Synck Styles
  *

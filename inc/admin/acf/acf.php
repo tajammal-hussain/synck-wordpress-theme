@@ -1,7 +1,5 @@
 <?php
-
 namespace Monk;
-
 /**
  * @property \Monk\ACF $parent Description
  */
@@ -53,21 +51,13 @@ abstract class ACF {
             $this->type = $type;
 
         }
-
-        if( empty($this->name) ) {
-
-            $this->name = sanitize_title( str_replace(' ', '_', $this->label) );
-
+        if (is_string($this->label)) {
+            $this->name = sanitize_title(str_replace(' ', '_', $this->label));
         }
-
         if( isset($key) ) {
-
             $this->key = $key;
-
         } else {
-
             $this->createKey();
-
         }
         
         return $this;
@@ -118,7 +108,6 @@ abstract class ACF {
     abstract function createKey();
 
 }
-
 require_once __DIR__.'/acf/group.php';
 require_once __DIR__.'/acf/field.php';
 require_once __DIR__.'/utils.php';
