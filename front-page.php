@@ -13,9 +13,18 @@
         foreach($page_layouts as $layout) {
 
         $layout_type = $layout['acf_fc_layout'];
-            
+           
         switch ($layout_type) {
-            case 'icon_slider':
+            case 'columns':
+                $responsive = array_map(function($item, $key) {
+                    return "{$key}-{$item}";
+                }, $layout['layout'], array_keys($layout['layout']));
+                $columns = array_map(function($item) {
+                    return "[content]{$item['content']}[/content]";
+                }, $layout['columns']);
+                $_responsive = implode(" ", $responsive);
+                $_columns = implode(" ", $columns);
+                echo "[synck_row classes=\"{$_responsive}\"]{$_columns}[/synck_row]";
             break;
         }
     }
