@@ -12,9 +12,25 @@
         foreach($page_layouts as $layout) {
 
         $layout_type = $layout['acf_fc_layout'];
+        $classes = "class=\"{$layout['display']['bg']} {$layout['display']['py']}\"";
         switch ($layout_type) {
             case 'html':
-                $shortcode .= "[sync_html content=\"{$layout['html']}\" class=\"{$layout['display']['bg']} {$layout['display']['py']}\"]";
+                $shortcode .= "[sync_html content=\"{$layout['html']}\" {$classes}]";
+            break;
+            case 'banner':
+                $shortcode .= "[sync_banner bg=\"{$layout['image']}\" content=\"{$layout['content']}\"  {$classes}";
+            break;
+            case 'text_-_image':
+                $shortcode .= "[synck_image_text bg=\"{$layout['image']}\" content=\"{$layout['content']}\"  {$classes} hortizontal=\"{$layout['horizontal_layout']}\"]";
+            break;
+            case 'icon_slider':
+                $icons = array_map(function($item) {
+                    return $item['icon'];
+                }, $layout['icon_box']);
+                
+                // Convert array to comma-separated string
+                $images = implode(',', $icons);
+                $shortcode .="[synck_icon_slider icons=\"{$images}\" {$classes}]";
             break;
         }
     }
