@@ -1,17 +1,8 @@
 <?php
-
 namespace Monk\Config;
 use Monk\Utils;
-
 define("MONK_CONFIG", true);
-
-
-remove_action('wp_enqueue_scripts', 'wp_common_block_scripts_and_styles');
-
-
 function acf_init() {
-    
-
     if( $api_key = get_theme_support('monk-google-maps') ) {
         
         acf_update_setting( 'google_api_key', reset($api_key) );
@@ -85,45 +76,28 @@ function setup_template_acf_fields ($post_type = null, $post = null) {
     $post       = $post ?: filter_input(INPUT_POST, 'post_id');
     
     if( is_numeric($post_type) ) {
-        
         $post_type = get_post_type($post_type);
-                
     }
     
     if( !function_exists('get_page_templates') ) {
-        
         return;
-        
     }
-    
     $templates  = get_page_templates($post, $post_type);
-    
     foreach( $templates as $title => $template ) {
-        
         $headers    = Utils\parse_template_headers(get_template_directory() . "/$template", 'field_group');
-        
         foreach( $headers as $header ) {
-            
             $header = wp_parse_args($header, [
                 'title' => $title,
                 'key'   => 'group_mnk_' . sanitize_title($template)
             ]);
-            
             $group = new \Monk\ACF\Group($header, false);
-            
             $group->style = 'seamless';
             $group->addToTemplate($template);
-                        
             $group->fields = array_map('\Monk\Utils\auto_resolve_acf_field', $group->fields);
-            
             $group->register();
-            
         }
-        
     }
-
 }
 add_action('add_meta_boxes', __NAMESPACE__ . '\setup_template_acf_fields', 5, 2);
 add_action('wp_ajax_acf/ajax/check_screen', __NAMESPACE__ . '\setup_template_acf_fields', 5);
 add_action('save_post', __NAMESPACE__ . '\setup_template_acf_fields', 5, 2);
-

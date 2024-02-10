@@ -22,7 +22,7 @@ require get_template_directory() . '/inc/admin/options/styles/options-type.php';
 /**
  * Theme Admin
  */
-    require get_template_directory() . '/inc/admin/admin-init.php';
+   require get_template_directory() . '/inc/admin/admin-init.php';
 /**
  * Setup.
  * Enqueue styles, register widget regions, etc.

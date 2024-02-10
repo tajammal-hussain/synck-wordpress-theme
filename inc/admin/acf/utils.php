@@ -332,9 +332,6 @@ function validate_acf_layout(array &$layout, $prefix) {
         if( isset($schema[$field]) && !call_user_func($schema[$field], $value) ) {
             
             printf("<strong>[$prefix] Validation failed for field '%s' against '%s':</strong>", $field, $schema[$field]);
-            
-            var_dump($value);
-            
             trigger_error("[$prefix] Layout field '$field' must pass this test: $schema[$field]", E_USER_ERROR);
             
         }
