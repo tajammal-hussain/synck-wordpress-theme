@@ -15,10 +15,10 @@
         $classes = "class=\"{$layout['display']['bg']} {$layout['display']['py']}\"";
         switch ($layout_type) {
             case 'html':
-                $shortcode .= "[sync_html {$classes}]{$layout['html']}[/sync_html]";
+                $shortcode .= "[synck_html {$classes}]{$layout['html']}[/synck_html]";
             break;
             case 'banner':
-                $shortcode .= "[sync_banner bg=\"{$layout['image']}\" {$classes} ]{$layout['content']}[/sync_banner]
+                $shortcode .= "[synck_banner bg=\"{$layout['image']}\" {$classes} ]{$layout['content']}[/synck_banner]
                 ";
             break;
             case 'text_-_image':
@@ -32,7 +32,7 @@
                 
                 // Convert array to comma-separated string
                 $images = implode(',', $icons);
-                $shortcode .="[synck_icon_slider icons=\"{$images}\" {$classes}]";
+                $shortcode .="[synck_icon_slider ids=\"{$images}\" {$classes}]";
             break;
             case 'icon_box':
                 $icons = array_map(function($item) {

@@ -31,3 +31,13 @@ require get_template_directory(). '/inc/functions/function-global.php';
 require get_template_directory(). '/inc/functions/function-setup.php';
 require get_template_directory() . '/inc/functions/function-custom-css.php';
 require get_template_directory() . '/inc/functions/builder-save.php';
+
+/**
+ * Setup.
+ * Shortcodes
+ */
+require get_template_directory(). '/inc/shortcodes/synck_icon_slider.php';
+require get_template_directory(). '/inc/shortcodes/synck_html.php';
+require get_template_directory(). '/inc/shortcodes/synck_banner.php';
+require get_template_directory(). '/inc/shortcodes/icon_box.php';
+require get_template_directory(). '/inc/shortcodes/synck_icon_box.php';
