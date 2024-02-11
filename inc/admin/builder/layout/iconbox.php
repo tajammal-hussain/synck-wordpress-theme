@@ -19,6 +19,11 @@ return $iconbox = [
                     'type' => 'text',
                 ],
                 [
+                    'label' => 'Url',
+                    'name' => 'url',
+                    'type' => 'url',
+                ],
+                [
                     'label' => 'Content',
                     'name' => 'content',
                     'type' => 'wysiwyg',

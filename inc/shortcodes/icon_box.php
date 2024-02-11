@@ -31,7 +31,7 @@ function synck_sub_icon_box_shortcode( $atts, $content, $tag ) {
     ?>
        <div class="service-card simple-shadow pop-in">
             <img src="<?php echo $image[0]; ?>" alt="<?php echo $_attachments->title; ?>" class="service-icon">
-            <h3><a href="./service-details.html"><?php echo $atts['title']; ?></a></h3>
+            <h3><a href="<?php $atts['url']; ?>"><?php echo $atts['title']; ?></a></h3>
             <p><?php echo do_shortcode( $content); ?></p>
         </div> 
     <?php

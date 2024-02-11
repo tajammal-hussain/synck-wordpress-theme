@@ -30,8 +30,10 @@ function synck_render_html_shortcode( $atts, $content, $tag ) {
 	ob_start(); 
 	?>
 	<section class="html-area">
-		<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
-			<?php echo do_shortcode( $content ); ?>
+		<div class="custom-conatiner">
+			<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
+				<?php echo do_shortcode( $content ); ?>
+			</div>
 		</div>
 	</section>
 	<?php

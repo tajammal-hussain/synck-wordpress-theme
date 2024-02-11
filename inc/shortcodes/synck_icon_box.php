@@ -26,8 +26,10 @@
 
     ?>
     <section class="service-area <?php echo esc_attr( implode( ' ', $classes ) ); ?> ">
-        <div class="services-list d-flex">
-            <?php echo do_shortcode( $content ); ?>
+        <div class="custom-container">
+            <div class="services-list d-flex">
+                <?php echo do_shortcode( $content ); ?>
+            </div>
         </div>
     </section>
     <?php
