@@ -41,3 +41,4 @@ require get_template_directory(). '/inc/shortcodes/synck_html.php';
 require get_template_directory(). '/inc/shortcodes/synck_banner.php';
 require get_template_directory(). '/inc/shortcodes/icon_box.php';
 require get_template_directory(). '/inc/shortcodes/synck_icon_box.php';
+require get_template_directory(). '/inc/shortcodes/columns.php';
